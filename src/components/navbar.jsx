@@ -1,6 +1,10 @@
 import React from 'react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
+import { useState } from 'react'
 const Navbar = () => {
+    const[nav,setNav]=useState(false)
+    const handleClick=()=>setNav(!nav)
+
     return (
         <div className="w-screen h-[80px] z-10 bg-zinc-200 fixed drop-shadow-lg">
             <div className="px-2 flex justify-between items-center w-full h-full">
@@ -18,9 +22,12 @@ const Navbar = () => {
                     <button className="border-none bg-transparent text-black mr-4">Sign in</button>
                     <button className="px-8 py-3 rounded-md">Sign up</button>
                 </div>
-                <div className="md:hidden"><MenuIcon className="w-6" /></div>
+                <div className="md:hidden" onClick={handleClick}>
+                    {!nav ?<MenuIcon className="w-6"/>:<XIcon className='w-5'/>}
+                    </div>
+                    
             </div>
-            <ul className="absolute bg-zinc-200 w-full px-8 md:hidden">
+            <ul className={!nav ? 'hidden':'absolute bg-zinc-200 w-full px-8'}>
                 <li className='border-b-2 border-zinc-300 w-full'>Home</li>
                 <li className='border-b-2 border-zinc-300 w-full'>About</li>
                 <li className='border-b-2 border-zinc-300 w-full'>Support</li>
