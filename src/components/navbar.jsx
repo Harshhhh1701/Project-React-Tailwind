@@ -20,15 +20,15 @@ const Navbar = () => {
                 </div>
                 <div className="md:hidden"><MenuIcon className="w-6" /></div>
             </div>
-            <ul className="absolute bg-zinc-200 w-full px-8">
+            <ul className="absolute bg-zinc-200 w-full px-8 md:hidden">
                 <li className='border-b-2 border-zinc-300 w-full'>Home</li>
                 <li className='border-b-2 border-zinc-300 w-full'>About</li>
                 <li className='border-b-2 border-zinc-300 w-full'>Support</li>
                 <li className='border-b-2 border-zinc-300 w-full'>Platform</li>
                 <li className='border-b-2 border-zinc-300 w-full'>Pricing</li>
                 <div className='flex flex-col my-4 space-y-4'>
-                    <button className="bg-transparent text-indigo-600 px-8 py-3 ">Sign In</button>
-                    <button className="px-8 py-3">Sign Up</button>
+                    <button className="bg-transparent text-indigo-600 px-8 py-3 rounded-md">Sign In</button>
+                    <button className="px-8 py-3 rounded-md">Sign Up</button>
                 </div>
             </ul>
 
